@@ -3,24 +3,20 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
-
-function aboutMe(){
+let age = 25;
+function aboutMe() {
   const name = "Ari";
   let food = "quesadillas";
   let place = "San Jose";
-  let age = "none of your business"
-    {
-  console.log(`My name is ${name} and I like to eat ${food}. I live in ${place} and my age is ${age}.`)
-  age = 36;
-  console.log(`Just kidding. ${name} is ${age} years old.`)
-    }
+  age = age +=11;
+    console.log(
+      `My name is ${name} and I like to eat ${food}. I live in ${place} and my age is ${age}.`
+    );
 }
+age = 44;
 aboutMe();
 
-
-
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
-
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {
