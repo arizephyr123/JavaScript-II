@@ -78,12 +78,31 @@ function contains(item, list, cb) {
 
 const isPresent = function(item, list) {
   if (list.includes(item)) {
-    console.log(`${item} is present.`);
+    console.log(`${item} is present`);
     return true;
+  }else {
+    console.log(`${item} is NOT present`);
   }
 };
 
 console.log(contains("yo-yo", items, isPresent));
+console.log(contains("banana", items, isPresent));
+
+//alternative solution with help from husband//
+function contains1(item, list, cb) {
+  // contains checks if an item is present inside of the given array/list.
+  // Pass true to the callback if it is, otherwise pass false.
+  console.log(`Checking for item ${item} :`);
+  cb(item, list.includes(item))
+}
+
+const isPresent1 = function( pass1) {
+  console.log('Item is :' ) 
+  pass1 ? console.log ('present.') : console.log ('not present.')
+};
+
+console.log(contains1("yo-yo", items, isPresent1));
+console.log(contains1("banana", items, isPresent1));
 
 /* STRETCH PROBLEM */
 
@@ -91,4 +110,5 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  
 }
